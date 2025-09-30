@@ -111,6 +111,64 @@ Errors Found:
     Response Time: 5.12s
 ```
 
+## Live Test Targets
+
+Here are legitimate, publicly available vulnerable web applications perfect for testing your scanner:
+
+### 🎯 Primary Test Targets
+
+**1. Acunetix Vulnerable Test Sites**
+```bash
+# Basic test
+python3 main.py -u "http://testphp.vulnweb.com/search.php?test=query"
+
+# Multi-parameter test
+python3 main.py -u "http://testphp.vulnweb.com/listproducts.php?cat=1&artist=2"
+
+# POST method test
+python3 main.py -u "http://testphp.vulnweb.com/login.php" -m POST
+```
+
+**2. DVWA (Damn Vulnerable Web Application)**
+```bash
+python3 main.py -u "http://www.dvwa.co.uk/vulnerabilities/sqli/?id=1&Submit=Submit"
+```
+
+**3. OWASP Juice Shop**
+```bash
+python3 main.py -u "https://juice-shop.herokuapp.com/#/search?q=test"
+```
+
+### 🔧 Advanced Test Commands
+
+```bash
+# High-performance scan with 10 threads
+python3 main.py -u "http://testphp.vulnweb.com/search.php?test=query" -t 10
+
+# Extended timeout for slow responses
+python3 main.py -u "http://testphp.vulnweb.com/search.php?test=query" -T 20
+
+# Save detailed report
+python3 main.py -u "http://testphp.vulnweb.com/search.php?test=query" -o vuln_report.txt
+
+# Test multiple parameters simultaneously
+python3 main.py -u "http://testphp.vulnweb.com/artists.php?artist=1&cat=2&test=3"
+```
+
+### 📋 Other Educational Targets
+
+- **WebGoat**: `http://webgoat.cloudapp.net/WebGoat/attack`
+- **Google Gruyere**: `https://google-gruyere.appspot.com/`
+- **HackThisSite**: `https://www.hackthissite.org/missions/basic/1/`
+
+### ⚠️ Important Notes
+
+**Only use these targets for educational purposes:**
+- ✅ **Authorized Testing**: All listed targets are designed for security testing
+- ✅ **Educational Purpose**: Perfect for learning and tool validation
+- ✅ **Legal Compliance**: These are intentionally vulnerable applications
+- ❌ **Never test real websites** without explicit written permission
+
 ## Security Notice
 
 This tool is designed for **authorized security testing only**. Always ensure you have permission before scanning any website or application. Unauthorized scanning may be illegal and violate terms of service.
