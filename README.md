@@ -83,8 +83,9 @@ Detects vulnerabilities by measuring response times when using time-delay payloa
 
 ```
     ╔══════════════════════════════════════════════════════════════╗
-    ║                Mini SQL Injection Scanner                    ║
-    ║                    Version 1.0                              ║
+    ║                  Mini SQL Injection Scanner                  ║
+    ║                          Version 1.0                         ║
+    ║                     Code By HadsXdevCate                     ║
     ╚══════════════════════════════════════════════════════════════╝
 
 [*] Scanning URL: http://example.com/page?id=1
