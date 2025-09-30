@@ -289,8 +289,9 @@ Examples:
     
     print("""
     ╔══════════════════════════════════════════════════════════════╗
-    ║                Mini SQL Injection Scanner                    ║
-    ║                    Version 1.0                              ║
+    ║                  Mini SQL Injection Scanner                  ║
+    ║                          Version 1.0                         ║
+    ║                     Code By HadsXdevCate                     ║
     ╚══════════════════════════════════════════════════════════════╝
     """)
     
