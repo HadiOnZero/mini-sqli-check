@@ -1,3 +1,2 @@
-flask
-flask_cors
-functions_frameworks
+requests>=2.25.1
+urllib3>=1.26.0
