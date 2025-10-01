@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-"""
-Mini SQL Injection Vulnerability Scanner
-A lightweight tool for detecting SQL injection vulnerabilities in web applications
-"""
 
 import requests
 import argparse
