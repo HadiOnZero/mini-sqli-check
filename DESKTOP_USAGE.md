@@ -1,247 +1,244 @@
-# SQL Injection Scanner - Desktop Version v2.0
+# SQL Injection Scanner - Versi Desktop v2.0
 
-## Overview
+## Ikhtisar
 
-The desktop version of the SQL Injection Scanner provides a **futuristic cyberpunk-themed** graphical interface built with PyQt5, featuring a dominant black color scheme with neon green accents. This advanced GUI makes vulnerability scanning more intuitive while maintaining the powerful functionality of the original command-line tool.
+Versi desktop dari SQL Injection Scanner menyediakan **antarmuka grafis bertema cyberpunk futuristik** yang dibangun dengan PyQt5, featuring skema warna hitam dominan dengan aksen neon hijau. GUI canggih ini membuat pemindaian kerentanan menjadi lebih intuitif sambil mempertahankan fungsionalitas powerful dari versi command-line original.
 
-## Features
+## Fitur-Fitur
 
-### 🖥️ **Futuristic Cyberpunk Interface**
-- **Dark Theme**: Dominant black background with neon green (#00ff41) accents
-- **Matrix-style Typography**: Monospace fonts for authentic hacker aesthetic
-- **Neon Glow Effects**: Glowing borders and text shadows
-- **Advanced UI Elements**: Custom-styled buttons, tables, and progress bars
-- **Real-time Holographic Display**: Live scan progress with futuristic styling
+### 🖥️ **Antarmuka Cyberpunk Futuristik**
+- **Tema Gelap**: Background hitam dominan dengan aksen neon hijau (#00ff41)
+- **Tipografi Matrix**: Font monospace untuk estetika hacker otentik
+- **Efek Glow**: Border dan elemen dengan efek neon
+- **Elemen UI Canggih**: Tombol, tabel, dan progress bar dengan gaya kustom
+- **Tampilan Holografik Real-time**: Progress scan dengan styling futuristik
 
-### 🔍 **Comprehensive Scanning**
-- Full SQL injection vulnerability detection
-- Support for both GET and POST methods
-- Multi-threaded scanning for faster results
-- Configurable timeout and thread settings
-- Time-based blind SQL injection detection
+### 🔍 **Pemindaian Komprehensif**
+- **Deteksi Kerentanan SQL Injection Lengkap**: Support metode GET dan POST
+- **Pemindaian Multi-thread**: Hasil lebih cepat dengan thread yang dapat dikonfigurasi
+- **Deteksi SQL Injection Buta Berbasis Waktu**: Identifikasi berdasarkan analisis waktu response
+- **Pengaturan Performa**: Timeout dan thread yang dapat disesuaikan
 
-### 📊 **Detailed Results**
-- Interactive results table with vulnerability status
-- Detailed parameter analysis
-- Comprehensive scan reports
-- Export reports to text files
-- Real-time logging with color-coded messages
+### 📊 **Hasil Detail**
+- **Tabel Hasil Interaktif**: Status kerentanan dengan kode warna cyberpunk
+- **Analisis Parameter Detail**: Informasi teknis lengkap untuk setiap parameter
+- **Laporan Scan Komprehensif**: Export laporan detail ke file teks
+- **Logging Real-time**: Pesan log dengan kode warna futuristik
 
-### ⚙️ **Customizable Settings**
-- Adjustable thread count (1-20 threads)
-- Configurable request timeout (5-60 seconds)
-- Customizable SQL injection payloads
-- Editable error detection patterns
-- HTTP method selection (GET/POST)
+### ⚙️ **Pengaturan yang Dapat Disesuaikan**
+- **Jumlah Thread**: 1-20 unit pemrosesan paralel
+- **Timeout Request**: 5-60 detik untuk server lambat
+- **Payload SQL Injection Kustom**: Edit payload melalui GUI
+- **Pola Deteksi Error**: Pattern regex yang dapat dimodifikasi
+- **Pemilihan Metode HTTP**: Dropdown GET/POST dengan tema futuristik
 
-## Installation
+## Instalasi
 
-### Prerequisites
-- Python 3.6 or higher
-- PyQt5 (for futuristic GUI)
-- requests library
-- Cyberpunk aesthetic appreciation
+### Persyaratan
+- Python 3.6 atau lebih tinggi
+- PyQt5 (untuk GUI futuristik)
+- Library requests
+- Aresiasi estetika cyberpunk
 
-### Install Dependencies
+### Install Dependensi
 ```bash
 pip install -r requirements.txt
 ```
 
-### Quick Install - Future Edition
+### Install Cepat - Edisi Futuristik
 ```bash
-# Install all dependencies for the futuristic desktop version
+# Install semua dependensi untuk versi desktop futuristik
 pip install PyQt5>=5.15.0 requests>=2.25.1 urllib3>=1.26.0
 
-# Optional: Install additional cyberpunk vibes
-echo "Initializing futuristic scanner interface..."
+# Opsional: Install vibes cyberpunk tambahan
+echo "Menginisialisasi antarmuka scanner futuristik..."
 ```
 
-## Usage - Future Edition
+## Penggunaan
 
-### Method 1: Using the Launcher Script (Recommended)
+### Metode 1: Menggunakan Script Launcher (Disarankan)
 ```bash
 python3 launch_desktop.py
 ```
 
-The launcher script will:
-- Initialize cyberpunk interface protocols
-- Verify system dependencies
-- Launch the futuristic desktop application
-- Engage neon-green matrix display
+Script launcher akan:
+- Menginisialisasi protokol antarmuka cyberpunk
+- Memverifikasi dependensi sistem
+- Meluncurkan aplikasi desktop futuristik
+- Mengaktifkan tampilan neon-hijau matrix
 
-### Method 2: Direct Neural Interface
+### Metode 2: Peluncuran Neural Langsung
 ```bash
 python3 desktop_scanner.py
 ```
 
-### Method 3: System Integration (Linux/Mac)
+### Metode 3: Integrasi Sistem (Linux/Mac)
 ```bash
 chmod +x launch_desktop.py
 ./launch_desktop.py
 ```
 
-### Method 4: Advanced Terminal Launch
+### Metode 4: Peluncuran Terminal Lanjutan
 ```bash
-# For maximum cyberpunk experience
+# Untuk pengalaman cyberpuk maksimal
 python3 desktop_scanner.py --theme=futuristic --glow=enabled
 ```
 
-## Interface Guide - Cyberpunk Edition
+## Panduan Antarmuka
 
-### 1. Scanner Tab (Neural Interface)
-- **TARGET URL**: Input field with neon green border and matrix-style text
-- **METHOD**: Protocol selector (GET/POST) with futuristic dropdown
-- **THREADS**: Parallel processing units (1-20) with cyberpunk spin controls
-- **TIMEOUT**: Request timeout in seconds (5-60) with glowing interface
-- **INITIATE SCAN**: Primary operation button with hover glow effects
-- **TERMINATE SCAN**: Emergency stop with red accent styling
-- **Clear Results**: System reset functionality
+### 1. Tab Scanner (Antarmuka Neural)
+- **URL Target**: Masukkan URL melalui antarmuka grafis futuristik
+- **Metode HTTP**: Dropdown GET/POST dengan tema futuristik
+- **Thread**: Kontrol spin cyberpunk untuk unit pemrosesan paralel
+- **Timeout**: Timeout request dalam detik dengan border neon hijau
+- **INITIATE SCAN**: Tombol operasi utama dengan efek hover glow
+- **TERMINATE SCAN**: Tombol berhenti darurat dengan aksen merah
+- **Clear Results**: Fungsi reset sistem
 
-### 2. Results Tab (Data Stream Analysis)
-- **VULNERABILITIES**: Real-time threat counter with red neon display
-- **PARAMETERS**: Target analysis counter with green matrix numbers
-- **PAYLOADS**: Attack vector counter with cyan holographic display
-- **Results Table**: Interactive grid with alternating dark rows
-- **Detailed Results**: Technical readout in monospace terminal font
-- **EXPORT REPORT**: Data extraction with cyberpunk file dialog
+### 2. Tab Hasil (Analisis Data Stream)
+- **VULNERABILITIES**: Counter ancaman real-time dengan tampilan merah neon
+- **PARAMETERS**: Counter analisis target dengan angka matrix hijau
+- **PAYLOADS**: Counter vektor serangan dengan tampilan holografik cyan
+- **Tabel Hasil**: Grid interaktif dengan baris bergantian gelap
+- **Hasil Detail**: Readout teknis dalam font terminal monospace
+- **EXPORT REPORT**: Ekstraksi data melalui dialog file cyberpunk
 
-### 3. Payloads Tab (Weapon Configuration)
-- **SQL Injection Payloads**: Arsenal customization with neon syntax highlighting
-- **Error Patterns**: Detection algorithms with matrix-style pattern display
-- **Load Defaults**: System restore with futuristic button styling
-- **Clear**: Memory wipe functionality with confirmation protocols
+### 3. Tab Payload (Konfigurasi Senjata)
+- **Payload SQL Injection**: Kustomisasi arsenal dengan syntax highlighting neon
+- **Pola Error**: Algoritma deteksi dengan tampilan matrix pola
+- **Load Defaults**: Restore payload standar dengan tombol futuristik
+- **Clear**: Fungsi hapus memori dengan protokol konfirmasi
 
-## Scanning Process - Future Protocol
+## Proses Scanning - Protokol Masa Depan
 
-1. **Initialize Target**: Input URL into the neural interface
-2. **Configure Attack Parameters**: Adjust threads, timeout, and protocol method
-3. **Engage Scanning Protocol**: Click "INITIATE SCAN" to begin vulnerability assessment
-4. **Monitor Data Stream**: Watch real-time holographic progress display
-5. **Analyze Threat Matrix**: Review findings in the cyberpunk results interface
-6. **Extract Intelligence**: Export detailed tactical reports to encrypted files
+1. **Inisialisasi Target**: Masukkan URL ke antarmuka neural
+2. **Konfigurasi Parameter Serangan**: Atur thread, timeout, dan metode protokol
+3. **Aktifkan Protokol Scanning**: Klik "INITIATE SCAN" untuk mulai penilaian kerentanan
+4. **Monitor Data Stream Real-time**: Pantau progress holografik secara live
+5. **Analisis Matriks Ancaman**: Review temuan dalam antarmuka hasil cyberpunk
+6. **Ekstraksi Intelijen**: Export laporan taktis terenkripsi ke file
 
-## Understanding Results - Cyberpunk Analysis
+## Memahami Hasil - Analisis Cyberpunk
 
-### Status Indicators (Threat Level Assessment)
-- **🟢 SAFE**: Target parameter shows no vulnerability signatures
-- **🔴 VULNERABLE**: Critical vulnerability detected - parameter compromised
-- **⚠️ ERRORS**: System anomalies detected in response analysis
+### Indikator Status (Penilaian Tingkat Ancaman)
+- **🟢 SAFE**: Parameter target tidak menunjukkan tanda kerentanan
+- **🔴 VULNERABLE**: Kerentanan kritis terdeteksi - parameter terkompromi
+- **⚠️ ERRORS**: Anomali sistem terdeteksi dalam analisis response
 
-### Vulnerability Classification (Attack Vector Analysis)
-- **Error-based SQL Injection**: Database error messages intercepted
-- **Time-based Blind SQL Injection**: Temporal analysis reveals delays
-- **Union-based SQL Injection**: Data union operations detected
+### Klasifikasi Kerentanan (Analisis Vektor Serangan)
+- **Error-based SQL Injection**: Pesan error database terintersepsi
+- **Time-based Blind SQL Injection**: Analisis temporal mengungkap delay
+- **Union-based SQL Injection**: Operasi data union terdeteksi
 
-### Response Analysis (Data Stream Decryption)
-- **Response Time**: Chronological anomaly detection for blind attacks
-- **Error Patterns**: SQL signature recognition in response streams
-- **Payload Testing**: Multi-vector attack simulation and analysis
+### Analisis Response (Dekripsi Data Stream)
+- **Waktu Response**: Deteksi anomali kronologis untuk serangan buta
+- **Pola Error**: Pengenalan tanda tangan SQL dalam stream response
+- **Testing Payload**: Simulasi dan analisis serangan multi-vektor
 
-## Customization - Advanced Configuration
+## Kustomisasi - Konfigurasi Lanjutan
 
-### Custom Payload Arsenal
-1. Navigate to Weapon Configuration (Payloads tab)
-2. Input custom attack vectors in the "SQL Injection Payloads" terminal
-3. Each payload on separate line with neon syntax highlighting
-4. Engage "INITIATE SCAN" to deploy custom payload array
+### Arsenal Payload Kustom
+1. Navigasi ke Konfigurasi Senjata (tab Payloads)
+2. Masukkan vektor serangan kustom di terminal "Payload SQL Injection"
+3. Setiap payload pada baris terpisah dengan syntax highlighting neon
+4. Aktifkan "INITIATE SCAN" untuk deploy array payload kustom
 
-### Custom Error Detection Algorithms
-1. Access Pattern Recognition System (Payloads tab)
-2. Input regex patterns in the "SQL Error Patterns" matrix
-3. Each pattern on new line with matrix-style display
-4. Utilize Python regex syntax for advanced pattern matching
+### Algoritma Deteksi Error Kustom
+1. Akses Sistem Pengenalan Pola (tab Payloads)
+2. Masukkan pola regex di matrix "Pola Error SQL"
+3. Setiap pola pada baris baru dengan tampilan matrix
+4. Gunakan syntax regex Python untuk pattern matching lanjutan
 
-### Performance Optimization (System Tuning)
-- **THREADS**: Increase parallel processing units for rapid deployment
-- **TIMEOUT**: Adjust temporal parameters for complex target analysis
-- **PAYLOAD COUNT**: Optimize attack vector array for speed efficiency
+### Optimasi Performa (Penyetelan Sistem)
+- **THREAD**: Tingkatkan unit pemrosesan paralel untuk deployment cepat
+- **TIMEOUT**: Atur parameter temporal untuk analisis target kompleks
+- **JUMLAH PAYLOAD**: Optimasi array vektor serangan untuk efisiensi kecepatan
 
-## Safety and Ethics - Cyberpunk Code
+## Keamanan & Etika - Kode Cyberpunk
 
-### System Protocols
-- **AUTHORIZATION REQUIRED**: Only infiltrate systems you own or have explicit permission to test
-- **LEGAL COMPLIANCE**: Ensure adherence to local jurisdiction and digital laws
-- **RESPONSIBLE DISCLOSURE**: Report vulnerabilities through proper channels to system owners
-- **RATE LIMITING**: Deploy reasonable thread counts to avoid system overload
+### Catatan Penting
+- **IZIN DIBUTUHKAN**: Hanya infiltasi sistem yang Anda miliki atau punya izin untuk diuji
+- **KEPATUHAN HUKUM**: Pastikan kepatuhan terhadap yurisdiksi lokal dan hukum digital
+- **PENGUNGKAPAN BERTANGGUNG JAWAB**: Laporkan kerentanan melalui saluran yang tepat ke pemilik sistem
+- **PEMBATASAN RATE**: Gunakan jumlah thread yang masuk akal untuk menghindari overload sistem
 
-### Best Practices (Hacker Ethics)
-- **STEALTH MODE**: Begin with minimal thread deployment (3-5 units)
-- **TEMPORAL SYNCHRONIZATION**: Use appropriate timeouts for target server analysis
-- **LOW-TRAFFIC OPERATIONS**: Conduct tests during minimal system activity periods
-- **DOCUMENTATION PROTOCOL**: Maintain detailed logs of all testing activities
-- **ETHICAL DISCLOSURE**: Follow responsible vulnerability reporting procedures
+### Praktik Terbaik (Etika Hacker)
+- **MODE STEALTH**: Mulai dengan deployment thread minimal (3-5 unit)
+- **SINKRONISASI TEMPORAL**: Gunakan timeout yang sesuai untuk analisis server target
+- **OPERASI LOW-TRAFFIC**: Lakukan testing selama periode aktivitas sistem minimal
+- **PROTOKOL DOKUMENTASI**: Simpan log detail dari semua aktivitas testing
 
-## Troubleshooting - System Diagnostics
+## Penyelesaian Masalah - Diagnostik Sistem
 
-### Common System Failures
+### Masalah Umum & Solusi
+
+#### Desktop tidak mau start:
+```bash
+# Install PyQt5 jika belum ada
+pip install PyQt5>=5.15.0
+
+# Jalankan dari directory yang benar
+cd /path/to/scanner/
+python3 launch_desktop.py
+```
 
 #### "PyQt5 Neural Interface Offline"
 ```bash
 pip install PyQt5
-# Re-engage cyberpunk interface protocols
+# Re-engage protokol antarmuka cyberpunk
 ```
 
-#### "No Target Parameters Detected"
-- Verify URL contains query parameters (e.g., `?id=1`)
-- Ensure parameter formatting follows standard protocols
-- Check neural interface connection stability
+#### "No Target Parameters Detected" (Desktop: "Tidak ada parameter target yang terdeteksi")
+- Verifikasi URL mengandung parameter query (misalnya `?id=1`)
+- Pastikan formatting parameter mengikuti standar protokol
+- Periksa stabilitas koneksi antarmuka neural
 
-#### "Network Infiltration Failed"
-- Confirm target system accessibility
-- Verify internet connection integrity
-- Increase temporal timeout parameters
-- Ensure target server permits incoming analysis requests
+#### "Network Infiltration Failed" (Desktop: "Infiltrasi jaringan gagal")
+- Konfirmasi aksesibilitas sistem target
+- Verifikasi integritas koneksi internet
+- Tingkatkan parameter timeout temporal
+- Pastikan server target mengizinkan request masuk
 
-#### "System Boot Failure"
-- Validate Python version compatibility (3.6+ required)
-- Confirm all dependency modules are operational
-- Execute from correct system directory
-- Monitor terminal for system error messages
+### Performance Issues (Optimasi Sistem)
+- Kurangi unit pemrosesan paralel jika scan lambat
+- Decrease payload count untuk scan lebih cepat
+- Periksa kronometri response server target
+- Pertimbangkan latensi transmisi jaringan
 
-### Performance Optimization (System Tuning)
-- Reduce parallel processing units if scan operations are sluggish
-- Minimize attack vector array for rapid deployment
-- Analyze target server response chronometry
-- Account for network transmission latency
+## Fitur-Fitur Lanjutan - Teknologi Masa Depan
 
-## Advanced Features - Future Technology
-
-### Multi-Parameter Infiltration
-The neural interface automatically detects and analyzes all parameters in target URLs:
+### Infiltrasi Multi-Parameter
+Antarmuka neural secara otomatis mendeteksi dan menganalisis semua parameter dalam URL target:
 ```
 http://example.com/page?id=1&name=test&category=items
 ```
-Will infiltrate: `id`, `name`, and `category` parameter vectors
+Akan menginfiltrasi: parameter `id`, `name`, dan `category`
 
-### Custom Headers (Advanced Protocol)
-The underlying scanner architecture supports custom header injection for sophisticated testing scenarios.
+### Header Kustom (Protokol Lanjutan)
+Arsitektur scanner underlying mendukung injeksi header kustom untuk skenario testing canggih.
 
-### Tactical Report Generation
-Comprehensive intelligence reports include:
-- Mission summary and threat statistics
-- Compromised parameter identification
-- Technical vulnerability specifications
-- Response chronometry and error pattern analysis
-- Strategic remediation recommendations
+### Generasi Laporan Taktis
+Laporan intelijen komprehensif mencakup:
+- Ringkasan misi dan statistik ancaman
+- Identifikasi parameter yang terkompromi
+- Spesifikasi kerentanan teknis
+- Analisis kronometri response dan pola error
+- Rekomendasi remediasi strategis
 
-## Support and Updates - Future Network
+## Dukungan & Update - Jaringan Masa Depan
 
-For system issues, feature requests, or protocol updates:
-- Interface with original command-line architecture for comparison
-- Analyze source code for advanced customization protocols
-- Deploy demo scanner for functionality verification
+Untuk masalah sistem, permintaan fitur, atau update protokol:
+- Interface dengan arsitektur command-line original untuk komparasi
+- Analisis source code untuk protokol kustomisasi lanjutan
+- Deploy demo scanner untuk verifikasi fungsionalitas
 
-## Version History - Evolution Timeline
-- **v2.0**: Future Edition with cyberpunk aesthetic and neon interface
-- **v1.0**: Original desktop version with standard GUI functionality
-- Based on command-line core with enhanced neural interface experience
-
----
-
-**⚠️ CYBERPUNK DISCLAIMER**: This futuristic interface provides the same core vulnerability assessment capabilities as the original command-line version, but with an advanced aesthetic designed for the modern digital warrior. The neon-green matrix display and dark theme create an immersive hacking experience while maintaining professional-grade security testing functionality.
-
-**SYSTEM READY**: Interface initialized. Target acquisition protocols active. Begin infiltration sequence.
+### Sejarah Versi - Timeline Evolusi
+- **v2.0**: Edisi Futuristik dengan estetika cyberpunk dan antarmuka neon
+- **v1.0**: Versi desktop original dengan fungsionalitas GUI standar
+- Berbasis pada inti command-line dengan pengalaman antarmuka neural yang ditingkatkan
 
 ---
 
-**Note**: This desktop version provides the same core functionality as the command-line version but with an enhanced user interface for easier operation and better result visualization.
+**⚠️ PENAFIANAN CYBERPUNK**: Antarmuka futuristik ini menyediakan kemampuan assessment kerentanan inti yang sama dengan versi command-line original, tetapi dengan estetika lanjutan yang dirancang untuk warrior digital modern. Tampilan matrix neon-hijau dan tema gelap menciptakan pengalaman hacking imersif sambil mempertahankan fungsionalitas testing keamanan profesional.
+
+**SISTEM SIAP**: Antarmuka diinisialisasi. Protokol akuisisi target aktif. Mulai sekuens infiltrasi!

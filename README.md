@@ -1,86 +1,143 @@
 # Mini SQL Injection Vulnerability Scanner
 
-A lightweight Python tool for detecting SQL injection vulnerabilities in web applications. This scanner uses multiple techniques including error-based detection and time-based blind SQL injection detection.
+Alat Python ringan untuk mendeteksi kerentanan SQL injection dalam aplikasi web. Scanner ini menggunakan berbagai teknik termasuk deteksi berbasis kesalahan dan deteksi SQL injection buta berbasis waktu.
 
-## Features
+## 🖥️ VERSI DESKTOP BARU - EDISI FUTURISTIK v2.0
 
-- **Multiple SQL Injection Payloads**: Tests with 25+ common SQL injection payloads
-- **Error Pattern Detection**: Identifies SQL errors from various database systems (MySQL, PostgreSQL, MSSQL, Oracle, DB2, SQLite)
-- **Time-based Blind Detection**: Detects time-based blind SQL injection vulnerabilities
-- **Multi-threading**: Fast scanning with configurable thread count
-- **Comprehensive Reporting**: Detailed vulnerability reports with findings
-- **Support for GET and POST**: Test both GET and POST parameters
-- **Concurrent Parameter Testing**: Test multiple parameters simultaneously
+**✨ Sekarang tersedia versi desktop dengan antarmuka cyberpunk futuristik!**
 
-## Installation
+### Fitur-Fitur Desktop:
+- **🎨 Tema Gelap Futuristik**: Dominasi warna hitam dengan aksen neon hijau
+- **🔍 Antarmuka Grafis Modern**: Built dengan PyQt5 untuk pengalaman pengguna premium
+- **⚡ Scanning Real-time**: Progress bar holografik dan log terminal futuristik
+- **📊 Hasil Interaktif**: Tabel hasil dengan warna-warni cyberpunk
+- **🛠️ Konfigurasi Lanjutan**: Payload kustom, pola error, dan pengaturan performa
 
-1. Clone or download the scanner files
-2. Install required dependencies:
+### Cara Menggunakan Versi Desktop:
+```bash
+# Jalankan launcher (disarankan)
+python3 launch_desktop.py
+
+# Atau langsung jalankan scanner
+python3 desktop_scanner.py
+```
+
+**📖 Panduan Lengkap Desktop**: Lihat [DESKTOP_USAGE.md](DESKTOP_USAGE.md) untuk dokumentasi futuristik!
+
+## Fitur-Fitur
+
+### Versi Command Line:
+- **Multiple SQL Injection Payloads**: Menguji dengan 25+ payload SQL injection umum
+- **Error Pattern Detection**: Mengidentifikasi kesalahan SQL dari berbagai sistem database (MySQL, PostgreSQL, MSSQL, Oracle, DB2, SQLite)
+- **Time-based Blind Detection**: Mendeteksi kerentanan SQL injection buta berbasis waktu
+- **Multi-threading**: Pemindaian cepat dengan jumlah thread yang dapat dikonfigurasi
+- **Comprehensive Reporting**: Laporan kerentanan detail dengan temuan
+- **Support for GET and POST**: Menguji parameter GET dan POST
+- **Concurrent Parameter Testing**: Menguji beberapa parameter secara simultan
+
+### Versi Desktop v2.0:
+- **🌟 Antarmuka Cyberpunk Futuristik**: Desain gelap dengan efek neon
+- **🎯 Pengalaman Pengguna Premium**: GUI modern dengan navigasi tab
+- **📈 Visualisasi Data Real-time**: Progress scanning dan hasil interaktif
+- **🔧 Kustomisasi Lanjutan**: Edit payload dan pola error secara visual
+- **💾 Export Report**: Simpan hasil scan dengan dialog file futuristik
+
+## Instalasi
+
+### Untuk Semua Versi:
+1. Clone atau download file-file scanner
+2. Install dependensi yang diperlukan:
 ```bash
 pip install -r requirements.txt
 ```
 
-## Usage
+### Untuk Versi Desktop (Fitur Futuristik):
+Pastikan PyQt5 terinstall:
+```bash
+pip install PyQt5>=5.15.0
+```
 
-### Basic Usage
+## Cara Penggunaan
+
+### 🔥 VERSI DESKTOP (Disarankan untuk Pemula):
+```bash
+# Jalankan launcher futuristik
+python3 launch_desktop.py
+
+# Atau langsung jalankan GUI
+python3 desktop_scanner.py
+```
+
+### Versi Command Line:
+
+#### Penggunaan Dasar
 ```bash
 python3 main.py -u "http://example.com/page?id=1"
 ```
 
-### Advanced Usage
+#### Penggunaan Lanjutan
 ```bash
-# Test POST parameters
+# Test parameter POST
 python3 main.py -u "http://example.com/login" -m POST
 
-# Use more threads for faster scanning
+# Gunakan lebih banyak thread untuk pemindaian lebih cepat
 python3 main.py -u "http://example.com/search?q=test" -t 10
 
-# Save report to file
+# Simpan laporan ke file
 python3 main.py -u "http://example.com/page?id=1" -o report.txt
 
-# Enable verbose output
+# Aktifkan output verbose
 python3 main.py -u "http://example.com/page?id=1" -v
 ```
 
-### Command Line Options
+### Opsi Command Line
 
-| Option | Description | Default |
+| Opsi | Deskripsi | Default |
 |--------|-------------|---------|
-| `-u, --url` | Target URL to scan (required) | - |
-| `-m, --method` | HTTP method (GET or POST) | GET |
-| `-t, --threads` | Number of threads | 5 |
-| `-T, --timeout` | Request timeout in seconds | 10 |
-| `-o, --output` | Output file for scan results | - |
-| `-v, --verbose` | Enable verbose output | False |
+| `-u, --url` | URL target untuk dipindai (wajib) | - |
+| `-m, --method` | Metode HTTP (GET atau POST) | GET |
+| `-t, --threads` | Jumlah thread | 5 |
+| `-T, --timeout` | Timeout request dalam detik | 10 |
+| `-o, --output` | File output untuk hasil scan | - |
+| `-v, --verbose` | Aktifkan output verbose | False |
 
-## How It Works
+## Cara Kerja
 
-1. **Parameter Extraction**: Automatically extracts parameters from the target URL
-2. **Payload Testing**: Tests each parameter with various SQL injection payloads
-3. **Error Detection**: Analyzes responses for SQL error patterns
-4. **Time-based Detection**: Measures response times to detect blind SQL injection
-5. **Reporting**: Generates detailed reports of findings
+### Versi Command Line:
+1. **Parameter Extraction**: Secara otomatis mengekstrak parameter dari URL target
+2. **Payload Testing**: Menguji setiap parameter dengan berbagai payload SQL injection
+3. **Error Detection**: Menganalisis response untuk pola kesalahan SQL
+4. **Time-based Detection**: Mengukur waktu response untuk mendeteksi SQL injection buta
+5. **Reporting**: Menghasilkan laporan detail dari temuan
 
-## Detection Methods
+### Versi Desktop:
+1. **Input GUI**: Masukkan URL melalui antarmuka grafis futuristik
+2. **Konfigurasi Visual**: Atur thread, timeout, dan metode melalui kontrol interaktif
+3. **Scan Interaktif**: Klik "INITIATE SCAN" untuk memulai pemindaian
+4. **Monitor Real-time**: Pantau progress melalui progress bar holografik
+5. **Analisis Visual**: Lihat hasil dalam tabel interaktif dengan tema cyberpunk
 
-### Error-based Detection
-The scanner looks for common SQL error messages from different database systems:
-- MySQL errors
-- PostgreSQL errors  
-- Microsoft SQL Server errors
-- Oracle errors
-- IBM DB2 errors
-- SQLite errors
-- Generic SQL errors
+## Metode Deteksi
 
-### Time-based Blind Detection
-Detects vulnerabilities by measuring response times when using time-delay payloads like:
+### Deteksi Berbasis Kesalahan (Error-based Detection)
+Scanner mencari pesan kesalahan SQL umum dari berbagai sistem database:
+- Kesalahan MySQL
+- Kesalahan PostgreSQL
+- Kesalahan Microsoft SQL Server
+- Kesalahan Oracle
+- Kesalahan IBM DB2
+- Kesalahan SQLite
+- Kesalahan SQL umum
+
+### Deteksi Buta Berbasis Waktu (Time-based Blind Detection)
+Mendeteksi kerentanan dengan mengukur waktu response saat menggunakan payload delay waktu:
 - `WAITFOR DELAY` (MSSQL)
 - `SLEEP()` (MySQL)
 - `pg_sleep()` (PostgreSQL)
 
-## Example Output
+## Contoh Output
 
+### Output Command Line:
 ```
     ╔══════════════════════════════════════════════════════════════╗
     ║                  Mini SQL Injection Scanner                  ║
@@ -112,27 +169,43 @@ Errors Found:
     Response Time: 5.12s
 ```
 
-## Live Test Targets
+### Output Versi Desktop:
+- **Antarmuka Futuristik**: Tampilan gelap dengan teks neon hijau
+- **Tabel Hasil Interaktif**: Parameter yang rentan ditampilkan dengan latar merah gelap
+- **Progress Bar Holografik**: Indikator progress dengan efek neon
+- **Log Terminal**: Output real-time dengan format monospace futuristik
+- **Export Report**: Simpan hasil melalui dialog file dengan tema cyberpunk
 
-Here are legitimate, publicly available vulnerable web applications perfect for testing your scanner:
+## Target Test Langsung (Untuk Praktik)
+
+Berikut adalah aplikasi web rentan yang tersedia secara publik dan sah untuk menguji scanner Anda:
 
 ### 🎯 Primary Test Targets
 
-**1. Acunetix Vulnerable Test Sites**
+**1. Situs Uji Rentan Acunetix**
 ```bash
-# Basic test
+# Test dasar
 python3 main.py -u "http://testphp.vulnweb.com/search.php?test=query"
 
-# Multi-parameter test
+# Test multi-parameter
 python3 main.py -u "http://testphp.vulnweb.com/listproducts.php?cat=1&artist=2"
 
-# POST method test
+# Test metode POST
 python3 main.py -u "http://testphp.vulnweb.com/login.php" -m POST
+
+# Atau gunakan versi desktop:
+python3 launch_desktop.py
+# Lalu masukkan: http://testphp.vulnweb.com/search.php?test=query
 ```
 
 **2. DVWA (Damn Vulnerable Web Application)**
 ```bash
+# Versi command line
 python3 main.py -u "http://www.dvwa.co.uk/vulnerabilities/sqli/?id=1&Submit=Submit"
+
+# Versi desktop - lebih mudah untuk pemula
+python3 launch_desktop.py
+# Copy paste URL di atas ke field URL
 ```
 
 **3. OWASP Juice Shop**
@@ -162,13 +235,20 @@ python3 main.py -u "http://testphp.vulnweb.com/artists.php?artist=1&cat=2&test=3
 - **Google Gruyere**: `https://google-gruyere.appspot.com/`
 - **HackThisSite**: `https://www.hackthissite.org/missions/basic/1/`
 
-### ⚠️ Important Notes
+### ⚠️ Catatan Penting
 
-**Only use these targets for educational purposes:**
-- ✅ **Authorized Testing**: All listed targets are designed for security testing
-- ✅ **Educational Purpose**: Perfect for learning and tool validation
-- ✅ **Legal Compliance**: These are intentionally vulnerable applications
-- ❌ **Never test real websites** without explicit written permission
+**Gunakan target ini hanya untuk tujuan edukasi:**
+- ✅ **Testing Sah**: Semua target terdaftar dirancang untuk testing keamanan
+- ✅ **Tujuan Edukasi**: Sempurna untuk pembelajaran dan validasi alat
+- ✅ **Kepatuhan Hukum**: Ini adalah aplikasi yang sengaja dibuat rentan
+- ❌ **JANGAN pernah test website nyata** tanpa izin tertulis eksplisit
+
+### 💡 Rekomendasi untuk Pemula:
+Jika Anda baru memulai, **disarankan menggunakan versi desktop** karena:
+- Antarmuka lebih ramah pengguna
+- Tidak perlu mengingat command line options
+- Hasil ditampilkan secara visual dan interaktif
+- Lebih mudah untuk memahami hasil scanning
 
 ## Security Notice
 

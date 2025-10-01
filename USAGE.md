@@ -1,57 +1,93 @@
-# SQL Injection Scanner - Usage Guide
+# Panduan Penggunaan SQL Injection Scanner
 
-## Quick Start
+## 🚀 Versi Desktop Futuristik v2.0 - UPDATE BARU!
 
-### 1. Install Dependencies
+### Cara Cepat Mulai (Rekomendasi untuk Pemula):
+```bash
+# Jalankan versi desktop dengan antarmuka cyberpunk
+python3 launch_desktop.py
+
+# Atau langsung jalankan GUI futuristik
+python3 desktop_scanner.py
+```
+
+**Kenapa memilih versi desktop?**
+- ✅ Antarmuka ramah pengguna (tidak perlu ingat command)
+- ✅ Tampilan futuristik dengan tema gelap dan neon hijau
+- ✅ Hasil scan ditampilkan secara visual dan interaktif
+- ✅ Cocok untuk pemula yang baru belajar security testing
+
+## Versi Command Line (Untuk Pengguna Advanced)
+
+### 1. Install Dependensi
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Basic Scan
+### 2. Scan Dasar
 ```bash
 python3 main.py -u "http://example.com/page?id=1"
 ```
 
-### 3. Advanced Scan Options
+### 3. Opsi Scan Lanjutan
 ```bash
-# Test POST parameters
+# Test parameter POST
 python3 main.py -u "http://example.com/login" -m POST
 
-# Use more threads for faster scanning
+# Gunakan lebih banyak thread untuk scanning lebih cepat
 python3 main.py -u "http://example.com/search?q=test" -t 10
 
-# Save detailed report
+# Simpan laporan detail
 python3 main.py -u "http://example.com/page?id=1" -o scan_report.txt
 
-# Custom timeout for slow servers
+# Timeout kustom untuk server lambat
 python3 main.py -u "http://example.com/page?id=1" -T 30
 ```
 
-## Common Usage Scenarios
+## Skenario Penggunaan Umum
 
-### Scenario 1: Testing a Search Form
+### Skenario 1: Testing Form Pencarian (Versi Desktop - MUDAH!)
+```bash
+# Jalankan GUI futuristik
+python3 launch_desktop.py
+# Masukkan URL: http://target.com/search?q=test&category=all
+# Atur thread: 8
+# Klik: INITIATE SCAN
+```
+
+### Skenario 1: Testing Form Pencarian (Versi Command Line)
 ```bash
 python3 main.py -u "http://target.com/search?q=test&category=all" -t 8
 ```
 
-### Scenario 2: Testing a Login Form
+### Skenario 2: Testing Form Login
 ```bash
+# Versi Desktop: Masukkan URL login, pilih method POST, klik scan
+# Versi Command Line:
 python3 main.py -u "http://target.com/login" -m POST -t 5
 ```
 
-### Scenario 3: Testing Multiple Parameters
+### Skenario 3: Testing Banyak Parameter
 ```bash
 python3 main.py -u "http://target.com/product?id=1&cat=electronics&sort=price" -t 10
 ```
 
-### Scenario 4: Comprehensive Scan with Report
+### Skenario 4: Scan Komprehensif dengan Laporan
 ```bash
 python3 main.py -u "http://target.com/page?id=1" -t 10 -T 15 -o comprehensive_report.txt
 ```
 
-## Understanding the Output
+## Memahami Output
 
-### Vulnerability Found
+### Versi Desktop (Tampilan Futuristik):
+- **🔴 VULNERABLE**: Parameter ditandai dengan warna merah neon di tabel
+- **🟢 SAFE**: Parameter aman ditandai dengan warna hijau neon
+- **📊 Statistik Real-time**: Counter VULNERABILITIES/PARAMETERS/PAYLOADS
+- **📋 Detail Interaktif**: Klik "View Details" untuk melihat informasi lengkap
+
+### Versi Command Line:
+
+#### Kerentanan Ditemukan
 ```
 [!] VULNERABILITIES FOUND!
 Vulnerable Parameters: id, search
@@ -67,57 +103,74 @@ Errors Found:
     Response Time: 5.12s
 ```
 
-### No Vulnerabilities Found
+#### Tidak Ada Kerentanan Ditemukan
 ```
 [+] No SQL injection vulnerabilities detected
 ```
 
-## Advanced Features
+## Fitur-Fitur Lanjutan
 
-### 1. Multi-threading
-- Use `-t` option to specify number of threads
-- Recommended: 5-10 threads for most scenarios
-- Higher thread count = faster scanning but more server load
+### 1. Multi-threading (Pemrosesan Paralel)
+- Gunakan opsi `-t` untuk menentukan jumlah thread
+- Direkomendasikan: 5-10 thread untuk kebanyakan skenario
+- Semakin banyak thread = scanning lebih cepat tapi beban server lebih berat
 
-### 2. Timeout Configuration
-- Use `-T` option to set request timeout
-- Default: 10 seconds
-- Increase for slow servers or complex queries
+**Di Versi Desktop:** Atur melalui spinner "Threads" dengan tampilan neon
 
-### 3. Method Selection
-- GET method: Tests URL parameters
-- POST method: Tests form data parameters
+### 2. Konfigurasi Timeout
+- Gunakan opsi `-T` untuk mengatur timeout request
+- Default: 10 detik
+- Tingkatkan untuk server lambat atau query kompleks
 
-### 4. Report Generation
-- Automatic timestamp-based filenames if not specified
-- Detailed vulnerability information
-- Response times and error patterns
+**Di Versi Desktop:** Atur melalui spinner "Timeout" dengan border hijau neon
 
-## Payload Categories
+### 3. Pemilihan Metode
+- Metode GET: Menguji parameter URL
+- Metode POST: Menguji parameter data form
 
-The scanner tests with various payload types:
+**Di Versi Desktop:** Pilih melalui dropdown "Method" dengan tema futuristik
 
-### Basic Injection
+### 4. Generasi Laporan
+- Nama file otomatis berbasis timestamp jika tidak ditentukan
+- Informasi kerentanan detail
+- Waktu response dan pola error
+
+**Di Versi Desktop:** Klik tombol "EXPORT REPORT" dengan gaya cyberpunk
+
+## Kategori Payload (Senjata Testing)
+
+Scanner menguji dengan berbagai tipe payload:
+
+### Versi Desktop:
+Akses melalui tab "Payloads" untuk melihat dan mengedit:
+- **SQL Injection Payloads**: Arsenal payload dengan syntax highlighting neon
+- **Error Patterns**: Pola deteksi dengan tampilan matrix
+- **Load Defaults**: Restore payload standar
+- **Clear**: Hapus semua payload
+
+### Versi Command Line:
+
+#### Basic Injection
 - `'` (single quote)
 - `''` (double single quote)
 - `' OR '1'='1` (classic OR injection)
 
-### Union-based
+#### Union-based
 - `1' UNION SELECT NULL--`
 - `1' UNION SELECT 1,2,3--`
 
-### Time-based Blind
+#### Time-based Blind
 - `'; WAITFOR DELAY '0:0:5'--` (MSSQL)
 - `' OR SLEEP(5)--` (MySQL)
 - `' OR pg_sleep(5)--` (PostgreSQL)
 
-### Boolean-based
+#### Boolean-based
 - `1' AND 1=1--` (true condition)
 - `1' AND 1=2--` (false condition)
 
-## Error Detection
+## Deteksi Error (Sistem Keamanan)
 
-The scanner detects errors from multiple database systems:
+Scanner mendeteksi error dari berbagai sistem database:
 
 ### MySQL
 - `SQL syntax.*MySQL`
@@ -140,73 +193,105 @@ The scanner detects errors from multiple database systems:
 - `SQLite.*Driver`
 - `Warning.*sqlite_.*`
 
-## Best Practices
+**Di Versi Desktop:** Semua pola ini dapat dilihat dan diedit melalui tab "Payloads" dengan antarmuka futuristik!
 
-### 1. Target Selection
-- Only scan targets you own or have permission to test
-- Start with non-production environments
-- Inform stakeholders before scanning
+## Praktik Terbaik (Protokol Keamanan)
 
-### 2. Scanning Strategy
-- Start with basic GET parameters
-- Test POST forms separately
-- Use appropriate thread counts
-- Monitor server responses
+### 1. Pemilihan Target (Reconnaissance)
+- Hanya scan target yang Anda miliki atau punya izin untuk diuji
+- Mulai dengan environment non-produksi
+- Informasikan stakeholder sebelum scanning
 
-### 3. Result Analysis
-- Verify findings manually
-- Test successful payloads manually
-- Check for false positives
-- Document all findings
+### 2. Strategi Scanning (Tactical Approach)
+- Mulai dengan parameter GET dasar
+- Test form POST secara terpisah
+- Gunakan jumlah thread yang sesuai
+- Monitor response server
 
-### 4. Performance Optimization
-- Use appropriate timeout values
-- Adjust thread count based on server response
-- Scan during low-traffic periods
-- Monitor network connectivity
+### 3. Analisis Hasil (Intelligence Analysis)
+- Verifikasi temuan secara manual
+- Test payload yang berhasil secara manual
+- Periksa false positives
+- Dokumentasikan semua temuan
 
-## Troubleshooting
+### 4. Optimasi Performa (System Tuning)
+- Gunakan nilai timeout yang tepat
+- Sesuaikan jumlah thread berdasarkan response server
+- Scan selama periode low-traffic
+- Monitor konektivitas jaringan
 
-### Common Issues
+### 💡 Tips untuk Pemula:
+1. **Mulai dengan Desktop**: Gunakan `python3 launch_desktop.py` untuk pengalaman lebih mudah
+2. **Gunakan Target Test Legal**: Praktik dengan situs testphp.vulnweb.com
+3. **Mulai Kecil**: Gunakan 3-5 thread di awal
+4. **Document Everything**: Simpan semua hasil scan untuk referensi
 
-#### 1. Connection Timeouts
+## Penyelesaian Masalah (System Diagnostics)
+
+### Masalah Umum dan Solusinya
+
+#### 1. Koneksi Timeout (Versi Desktop & Command Line)
 ```bash
-# Increase timeout
+# Tingkatkan timeout
 python3 main.py -u "http://slow-server.com/page?id=1" -T 30
+
+# Di Desktop: Atau atur spinner "Timeout" ke nilai lebih tinggi
 ```
 
-#### 2. Too Many Threads
+#### 2. Terlalu Banyak Thread
 ```bash
-# Reduce thread count if server is overwhelmed
+# Kurangi jumlah thread jika server kelebihan beban
 python3 main.py -u "http://target.com/page?id=1" -t 3
+
+# Di Desktop: Turunkan nilai "Threads" di antarmuka
 ```
 
-#### 3. False Positives
-- Manually verify findings
-- Check response context
-- Test with different payloads
+#### 3. False Positives (Alarm Palsu)
+- Verifikasi temuan secara manual
+- Periksa konteks response
+- Test dengan payload berbeda
+- **Di Desktop**: Klik "View Details" untuk analisis mendalam
 
-#### 4. Missing Parameters
-- Ensure URL contains parameters
-- Check URL encoding
-- Verify parameter names
+#### 4. Parameter Hilang
+- Pastikan URL berisi parameter
+- Periksa encoding URL
+- Verifikasi nama parameter
 
-### Error Messages
+### Pesan Error dan Solusinya
 
-#### "No parameters found in URL"
-- Add parameters to the URL: `http://site.com/page?id=1&param=value`
+#### "No parameters found in URL" (Desktop: "Tidak ada parameter yang ditemukan")
+- Tambahkan parameter ke URL: `http://site.com/page?id=1&param=value`
+- **Di Desktop**: Pastikan URL mengandung tanda `?` dan parameter
 
-#### "Error during scan"
-- Check network connectivity
-- Verify target accessibility
-- Check URL format
+#### "Error during scan" (Desktop: "Scan gagal")
+- Periksa konektivitas jaringan
+- Verifikasi aksesibilitas target
+- Periksa format URL
+- **Di Desktop**: Cek log terminal untuk detail error
 
-## Integration Examples
+### 🆘 Masalah Desktop Spesifik:
 
-### Bash Script Integration
+#### Desktop tidak mau start:
+```bash
+# Install PyQt5 jika belum ada
+pip install PyQt5>=5.15.0
+
+# Jalankan dari directory yang benar
+cd /path/to/scanner/
+python3 launch_desktop.py
+```
+
+#### Tampilan tidak normal:
+- Pastikan monitor support warna penuh
+- Coba restart aplikasi
+- Update driver grafis jika perlu
+
+## Contoh Integrasi (Untuk Automation)
+
+### Integrasi Script Bash (Command Line Only)
 ```bash
 #!/bin/bash
-# Scan multiple URLs from file
+# Scan multiple URLs dari file
 
 URL_FILE="targets.txt"
 REPORT_DIR="reports"
@@ -219,7 +304,7 @@ while IFS= read -r url; do
 done < "$URL_FILE"
 ```
 
-### Python Integration
+### Integrasi Python (Command Line Only)
 ```python
 import subprocess
 import json
@@ -233,26 +318,67 @@ def scan_target(url, output_file=None):
     return result.returncode, result.stdout, result.stderr
 ```
 
-## Security Considerations
+### ⚠️ Catatan Penting:
+**Versi Desktop TIDAK mendukung integrasi script** karena berbasis GUI. Gunakan versi command line untuk:
+- Automation
+- Batch scanning
+- Integrasi dengan tools lain
+- Scripting dan scheduling
 
-### Legal Requirements
-- Obtain written permission before scanning
-- Follow responsible disclosure practices
-- Comply with local laws and regulations
-- Respect rate limits and server resources
+**Untuk pengalaman visual dan interaktif: Gunakan Desktop**
+**Untuk automation dan scripting: Gunakan Command Line**
 
-### Ethical Guidelines
-- Only scan authorized targets
-- Minimize server impact
-- Report findings appropriately
-- Protect sensitive data
+## Pertimbangan Keamanan (Protokol Etik)
 
-## Support and Updates
+### Persyaratan Legal
+- Dapatkan izin tertulis sebelum scanning
+- Ikuti praktik pengungkapan yang bertanggung jawab
+- Patuhi hukum dan regulasi setempat
+- Hormati batasan rate dan resource server
 
-For issues, feature requests, or updates:
-- Check the documentation first
-- Test with the demo scanner
-- Verify dependencies are installed
-- Review common troubleshooting steps
+### Pedoman Etika
+- Hanya scan target yang sah/berizin
+- Minimalisasi dampak terhadap server
+- Laporkan temuan secara tepat
+- Lindungi data sensitif
 
-Remember: This tool is for authorized security testing only. Always ensure you have explicit permission before scanning any system.
+### 🎯 Untuk Pemula:
+1. **SELALU mulai dengan versi desktop** untuk memahami cara kerja
+2. **Gunakan target test legal** (lihat daftar di README)
+3. **JANGAN pernah test website produksi** tanpa izin
+4. **Document everything**: Simpan semua hasil dan izin
+
+### ⚖️ Tanggung Jawab:
+Ingat: Alat ini untuk **testing keamanan yang sah** saja. Kesalahan penggunaan bisa mengakibatkan:
+- Tuntutan hukum
+- Pelanggaran etik
+- Masalah akademik/perorangan
+
+**Scan dengan bijak, scan dengan izin, scan dengan tujuan edukasi!**
+
+## Dukungan dan Update
+
+Untuk masalah, permintaan fitur, atau update:
+- Periksa dokumentasi terlebih dahulu
+- Test dengan demo scanner
+- Verifikasi dependensi terinstall
+- Review langkah troubleshooting umum
+
+### 📚 Prioritas Bantuan:
+1. **Pemula**: Gunakan versi desktop dulu (`python3 launch_desktop.py`)
+2. **Masalah Desktop**: Lihat bagian troubleshooting di DESKTOP_USAGE.md
+3. **Masalah Command Line**: Lihat bagian troubleshooting di atas
+4. **Masalah Umum**: Cek README.md bagian troubleshooting
+
+### 🔗 Resource Tambahan:
+- 📖 [Panduan Desktop Futuristik](DESKTOP_USAGE.md)
+- 📋 [Demo Scanner](demo_scanner.py) - Untuk praktik tanpa koneksi internet
+- 🧪 [Test Scanner](test_scanner.py) - Untuk verifikasi instalasi
+
+---
+
+**⚠️ PENGINGAT AKHIR**: Alat ini hanya untuk **testing keamanan yang sah**. SELALU pastikan Anda memiliki izin eksplisit sebelum memindai sistem apapun. 
+
+**🎯 Motto**: "Scan dengan bijak, scan dengan izin, scan dengan tujuan edukasi!"
+
+**Selamat mencoba dan stay ethical!** 🚀
